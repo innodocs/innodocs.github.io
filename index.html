@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./assets/font-awesome.min.css" rel="stylesheet"><link href="./assets/styles.css" rel="stylesheet"><link rel="shortcut icon" type="image/png" href="favicon.png"><style>
+.scalatex-site-Styles-headerLink{
+  color: #777;
+  opacity: 0.05;
+  text-decoration: none;
+}
+
+
+.scalatex-site-Styles-hoverContainer:hover .scalatex-site-Styles-headerLink{
+  color: #777;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.scalatex-site-Styles-hoverContainer:hover .scalatex-site-Styles-headerLink:hover{
+  opacity: 1.0;
+}
+.scalatex-site-Styles-hoverContainer:hover .scalatex-site-Styles-headerLink:active{
+  opacity: 0.75;
+}
+
+.scalatex-site-Styles-content{
+  color: #777;
+  line-height: 1.6em;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  padding: 0 1em;
+  padding-bottom: 50px;
+}
+.scalatex-site-Styles-content *{
+  position: relative;
+}
+.scalatex-site-Styles-content p{
+  text-align: justify;
+}
+.scalatex-site-Styles-content a:link{
+  color: #37a;
+  text-decoration: none;
+}
+.scalatex-site-Styles-content a:visited{
+  color: #949;
+  text-decoration: none;
+}
+.scalatex-site-Styles-content a:hover{
+  text-decoration: underline;
+}
+.scalatex-site-Styles-content a:active{
+  color: #000;
+  text-decoration: underline;
+}
+.scalatex-site-Styles-content code{
+  color: #000;
+}
+
+/*Workaround for bug in highlight.js IDEA theme*/
+span.hljs-tag, span.hljs-symbol{
+    background: none;
+}
+    </style><title>Contact Tracking</title><script src="./assets/scripts.js"></script><style>.scalatex-scrollspy-Styles-noteBox{
+  background-color: rgb(25, 24, 24);
+  bottom: 0px;
+  height: 14px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  padding-top: 5px;
+  text-align: right;
+}
+
+.scalatex-scrollspy-Styles-note{
+  color: rgb(85, 85, 85);
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+}
+.scalatex-scrollspy-Styles-note:hover{
+  color: rgb(119, 119, 119);
+}
+.scalatex-scrollspy-Styles-note:active{
+  color: rgb(153, 153, 153);
+}
+
+.scalatex-scrollspy-Styles-menu{
+  background-color: rgb(25, 24, 24);
+  height: 100%;
+  left: 0px;
+  overflow: scroll;
+  position: fixed;
+  top: 0px;
+  transition: width 0.2s ease-out 0s;
+  white-space: nowrap;
+}
+
+.scalatex-scrollspy-Styles-menuLink{
+  align-items: center;
+  background-color: rgb(31, 141, 214);
+  color: white;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  position: absolute;
+  text-decoration: none;
+  top: 0px;
+  width: 44px;
+}
+.scalatex-scrollspy-Styles-menuLink:hover{
+  background-color: rgb(54, 159, 226);
+  color: white;
+}
+.scalatex-scrollspy-Styles-menuLink:active{
+  background-color: rgb(98, 180, 232);
+  color: white;
+}
+
+.scalatex-scrollspy-Styles-menuItem{
+  border-bottom: 1px solid rgb(68, 68, 68);
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 15px;
+  text-decoration: none;
+}
+.scalatex-scrollspy-Styles-menuItem:hover{
+  background-color: rgb(41, 40, 40);
+  color: rgb(187, 187, 187);
+}
+.scalatex-scrollspy-Styles-menuItem:active{
+  background-color: rgb(57, 56, 56);
+  color: rgb(221, 221, 221);
+}
+
+.scalatex-scrollspy-Styles-menuList{
+  display: block;
+  left: 0px;
+  margin: 0px;
+  overflow: hidden;
+  padding-left: 15px;
+  position: relative;
+  top: 0px;
+  transition: max-height 0.2s ease-out 0s;
+}
+
+.scalatex-scrollspy-Styles-selected{
+  background-color: rgb(31, 141, 214);
+  color: white;
+}
+.scalatex-scrollspy-Styles-selected:hover{
+  background-color: rgb(54, 159, 226);
+  color: white;
+}
+.scalatex-scrollspy-Styles-selected:active{
+  background-color: rgb(98, 180, 232);
+  color: white;
+}
+
+.scalatex-scrollspy-Styles-closed{
+  color: rgb(153, 153, 153);
+}
+
+.scalatex-scrollspy-Styles-pathed{
+  border-left: 2px solid white;
+}
+
+.scalatex-scrollspy-Styles-exact{
+  font-style: italic;
+}
+
+.scalatex-quote{
+  align-items: center;
+  color: rgb(31, 141, 214);
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  justify-content: center;
+  font-style: bold;
+  text-decoration: none;
+}
+
+</style></head><body style="transition: margin-left 0.2s ease-out 0s; margin-left: 250px;"><div>
+
+<div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;" id="Scalateχ" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag"><h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">Contact Tracking <a class=" scalatex-site-Styles-headerLink" href="" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a></h1><br>
+<h2 style="font-weight: 300;color: #ccc;padding: 0px;margin-top: 0px;">
+  ver 0.1.2 (draft)</h2></div>
+  
+<div class=" scalatex-site-Styles-content">
+  <p>
+    Ca raspuns la pandemia de coronavirus, Governul Romaniei a adoptat intr-un prim pas
+    masuri stricte de separare sociala, izolare la domiciliu si carantinare. Aceste masuri
+    au fost adoptate precoce, inainte ca alte tari (din vestul Europei si nu numai) sa 
+    adopte masuri similare, si au facut ca pandemia sa ramana controlabila si sa fie 
+    evite situatii extreme (ca cele din Italia si Spania) &mdash; chiar si in conditiile
+    in care sistemul medical din Romania nu e cel mai performant. </p>
+  <p>
+    Din pacate, masurile adoptate au avut ca urmare o reducere brutala a activitatii
+    economice, si o crestere pe masura a somajului tehnic si somajului. Ca atare, e
+    absolut vital ca economia si activitatea economica sa fie re-startata cu
+    celeritate. In acest sens, Presedentia si Guvernul Romaniei au hotarat ca Starea
+    de Urgenta sa nu fie prelungita dupa 15 mai, si sa fie implementate, gradual,
+    masuri de relaxare si de iesire din stopajul economic curent. </p>
+  <p>
+    In diverse declaratii facute de reprezentanti ai Guvernului (Ministrul Sanatatii,
+    etc) se pune in vedere populatiei si mediului de afaceri ca orice masura de
+    relaxare poate &ndash; si va fi &ndash; revocata daca va conduce la o crestere
+    a numarului de noi infectii. </p>
+  <p>
+    Ce se ignora in acest discurs e ca orice re-implementare a unor masuri de control
+    al pandemiei va avea efecte majore asupra moralului populatie si asupra mediului
+    de afaceri: daca stopajul economic a fost si este extrem de dureros si nociv,
+    majoritatea firmelor vor avea puterea financiara pentru a restarta activitatea;
+    dar e putin probabil ca multe firme vor putea sa opereze in regim stop-and-go,
+    si din pacate, orice nou re-start va limita numarul firmelor si afacerilor
+    care vor supravietuii.</p>
+  <p>
+    <b>Ca atare, e vital ca odata ce s-au pornit masurile de relaxare, sa nu se regreseze! </b>
+  </p>
+       
+  <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+       id="MasuriControl" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+       <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">Masuri de Control<a class=" scalatex-site-Styles-headerLink" href="#GettingStarted" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a></h1><br>
+  </div>
+  
+  <p>
+  Planurile de relaxare/relansare din diverse tari/regiuni sunt cat se poate de similare, spre exemplu, in California,
+  se prevede o relaxare graduala in 4 pasi:
+  </p>
+  
+  <div style="display: flex; justify-content: left;">
+    <div style="padding-right: 30px"><img src="./assets/covid-ca-1.png" alt="CA Roadmap" width="400"/></div>
+    <div style="padding-left:  30px"><img src="./assets/covid-ca-2.png" alt="CA Roadmap" width="400"/></div>
+  </div><br/>
+   <div style="display: flex; justify-content: left;"> 
+    <div style="padding-right: 30px"><img src="./assets/covid-ca-3.png" alt="CA Roadmap" width="400"/></div>
+    <div style="padding-left:  30px"><img src="./assets/covid-ca-3.png" alt="CA Roadmap" width="400"/></div>
+  </div> 
+  
+  <p>
+  Preconditia pentru inceperea relaxarii este ca numarul de cazuri noi de infectie sa se aplatizeze/scada, dupa care
+  se intrevad un set de masuri care sa tina rata de infectie sub control (R-0 < 1):
+  <ul>
+    <li>
+      Distantarea fizica si obligatia de a purta masca
+    </li>
+    <li>
+      Depistarea si izolarea rapida a persoanelor simptomatice
+    </li>
+     <li>
+      Testarea populatiei, cu precadere si prioritate a persoanelor care
+      prin natura ocupatiei au contact cu multe alte persoane (personal medical,
+      angajati magazine, ...)
+    </li>
+    <li>
+      Urmarirea contactilor persoanelor infectate
+    </li>
+    <li>
+      Mentinerea integritatii si performantei sistemului medical, in principal
+      prin evitarea contaminarii personalului medical si spitalelor.
+    </li>
+  </ul>
+  </p>
+
+    
+  <h1 id="DistantareFizica" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag"><a class=" scalatex-site-Styles-headerLink"
+      href="#DistantareFizica" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+      Distantarea Fizica</h1>
+  <p>
+    Tari precum Coreea de Sud, Taiwan, dar si Cehia, care au implementat cu celeritate
+    masuri de separare fizica si de obligativitate a purtarii mastii in public
+    (atat in spatii inchise cat si deschise) au observat un declin
+    semnificativ a ratei de infectie (R-0). Obligativitatea purtarii mastii in public s-a dovedit
+    a fi un pilon semnificativ in managementul infectiei in conditii de
+    non-lock-down.</p>
+   <p>
+     Din pacate, din observatiile culese in cele cateva zile care au trecut de la
+     legiferarea obligiativitatii purtarii mastii (in spatiile inchise), aceasta
+     masura nu va avea efectul scontat si se va dovedi in final inefectiva:
+     <ul>
+       <li>Majoritatea populatiei nu poarta masca in spatiile deschise</li>
+       <li>Masca e purtata eronat, de exemplu prin ne-acoperirea nasului</li>
+       <li>Angajati din magazine isi dau jos masca imediat ce intrerup contactul
+       direct cu clientul</li>
+     </ul></p>
+    <p>
+      Cercetari recente afirma ca o cale importanta de transmitere a bolii (poate
+      chiar calea principala) este prin micro-stropi generati de bolnavi 
+      asimptomatici in timpul vorbirii:
+       
+       <div class="scalatex-quote"><cite>Speech droplets generated by asymptomatic carriers of SARS-CoV-2
+       are increasingly considered to be a likely mode of disease transmission.</cite></div>
+    (ref:
+      <a href="https://www.pnas.org/content/early/2020/05/12/2006874117?mod=article_inline">
+        <cite>The airborne lifetime of small speech droplets and their potential importance
+        in SARS-CoV-2 transmission</cite></a>, 
+      <a href="https://www.marketwatch.com/story/speaking-causes-airborne-virus-transmission-coroanvirus-study-gives-more-insight-into-the-diseases-rapid-contagion-2020-05-14">
+        <cite>New peer-reviewed research says coronavirus droplets caused by
+        talking remain in the air for 8-14 minutes</cite></a>)
+    </p>
+    <p>
+      In plus, cozile, imbulzeala si <q>calcatul pe picioare</q> par sa fie din nou la ordinea zilei.
+    </p>
+    <p>
+      Ca atare si ca urmare, masurile de "distantare fizica" vor avea un efect limitat, si din pacate
+      nu se vor constitui intr-o unealta principala in lupta impotriva infectiei &mdash; fara o
+      initiativa majora de PR/media si de educatie din partea Guvernului, Min. Sanatatii, etc.
+    </p> 
+    <p>  
+        Vezi si <a href="http://www.poarta-masca.ro">www.poarta-masca.ro</a>.
+    </p>  
+ 
+  <h1 id="DepistareRapida" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag"><a class=" scalatex-site-Styles-headerLink"
+      href="#DepistareRapida" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+      Depistare Rapida</h1>
+  <p>
+    Managementul COVID-19 e complicat de trei factori caracteristici acestei infectii
+    (ref: <a href="https://www.cidrap.umn.edu/sites/default/files/public/downloads/cidrap-covid19-viewpoint-part1_0.pdf">
+          <cite>COVID-19: The CIDRAP Viewpoint</cite></a>):
+    <ul>
+      <li>perioada lunga de incubare: <div class="scalatex-quote"><q>...the average incubation period for COVID-19 is 
+            5 days (range, 2 to 14 days). The longer incubation period allows the virus to move silently in
+            different populations before being detected</q></div>
+      </li>
+      <li>procentaj ridicat a cazurilor asimptomatice: <div class="scalatex-quote"><q>Although information is still
+            being collected to definitively define the asymptomatic fraction for COVID-19, public health
+            officials have stated that 25% of all cases may be asymptomatic </q></div>
+      </li>
+      <li>gradul de contagiozitate este maxim in jurul perioadei aparitiei primelor simptome: <div class="scalatex-quote"><q>Another consideration is the 
+            timeframe of presymptomatic viral shedding for people who fall ill. One recent
+            study found that the SARS-CoV-2 viral load was highest at the time of symptom onset</q></div>
+      </li>  
+    </ul>
+  </p>
+  <p>
+    De vreme ce detectarea si izolarea cazurilor asimptomatice (25% din cazuri) se dovedeste extrem de dificila, si
+    este sursa principala a incidentelor cazurilor de <q>super-spreaders</q> (ref: 
+      <a href="https://www.webmd.com/lung/news/20200409/super_spreader_events_increase_covid_19_cases">
+      <cite>'Super Spreader' Events Increase COVID-19 Cases</cite></a>), devine cu atat mai importanta detectarea si izolarea
+     celorlalte 75% din cazuri &ndash; cele simptomatice; iar aceasta detectare/izolare trebuie realizata cu maxima
+     rapiditate, data fiind evolutia contagiozitatii cu un maxim in jurul aparitiei primelor simptome.
+   </p>
+   <p>
+     Un grup de oameni de stiinta din SUA avertizeaza ca masurile de control care preconizeaza doar testarea persoanelor
+     simptomatice impreuna cu teste in diverse locatii (metrou, intrari in institutii publice, etc) ale temperaturii
+     populatiei vor fi insuficiente (ref: <a href="https://s.wsj.net/public/resources/documents/Scientists_to_Stop_COVID19_2020_04_23_FINAL.pdf">
+     <cite>Scientist to Stop COVID-19</cite></a>):
+     <div class="scalatex-quote"><q>
+				Once current social-distancing measures are lifted, the current policy of testing only symptomatic
+				individuals cannot adequately curtail COVID-19 transmission. For example, a study of COVID
+				transmission in Wuhan, China occurring between February 1 and March 12—when Chinese health officials
+				were carrying out house-to-house temperature checks on the general population—found that even with such
+				intrusive measures 86% of COVID cases were not identified, likely because the majority of infected persons
+				had mild symptoms.</q> 
+     </div>
+   </p>
+   <p>
+     Propunerea acestui grup este ca populatia sa (1) poarte echipamente de protectie (masti); (2) sa fie testata
+     periodic (via teste PCR) si (3) sa certifice <b style="color: red">zilnic</b>, inainte de a parasi locuinta, ca nu prezinta
+     simptome asociate cu Covid-19:
+     <div class="scalatex-quote">
+        Daily Certification of Symptoms:<br/>
+				All employees and students must certify (via smartphone app), before leaving home, that they are not
+				experiencing enough of the following COVID-19 symptoms to exceed a calculated risk, weighted by
+				symptom frequency, of being infected with SARS-CoV-2 (incidence frequency and standard error are
+				shown, with data sources):<br/>
+				a. Fever (0.64±0.030)2–4<br/>
+				b. Sinus pain (0.50±0.18)4<br/>
+				c. Cough (0.46±0.032) 2–4<br/>
+				d. Reduced or altered sense of smell or taste (0.44±0.17)<br/>
+				e. Expectoration (0.32±0.036)3<br/>
+				f. Stuffy nose (0.25±0.15)4<br/>
+				g. Chills (0.18±.044)2<br/>
+				h. Fatigue (0.18±0.025)2,3<br/>
+				i. Sore throat (0.13±0.039)2<br/>
+				j. Headache (0.13±0.037)2,4<br/>
+				k. Difficulty breathing (0.11±0.034)2,4<br/>
+				l. Joint or muscle pain(0.099±0.023)3,4<br/>
+				m. Diarrhea (0.056±0.015)2–4<br/>
+				n. Vomiting (0.026±0.018)2<br/>
+		 </div>
+   </p>
+   <p>
+     Aceasta certificare se poate implementa fie printr-o aplicatie mobila (smartphone app), sau printr-o declaratie
+     pe propria raspundere, asa cum a fost mandatata in cazul parasirii locuintei in perioada situatiei de urgenta.
+     Verificarea acestei declaratii va trebui facuta in orice locatie in care persoana va petrece mai mult timp in
+     prezenta altor persoane (transport in comun, birou, sala de clasa, magazine, restaurante, ...).
+   </p>
+   <p>
+     Aplicatia noastra <a href="#Covid19App"><cite>COVID-19</cite></a> implementeaza suportul pentru o asemenea
+     <a href="#Covid19App-Certification">certificare</a>, si va genera un document PDF ori, in mod alternativ, un cod QR.
+   </p>
+   <p>
+     Asa cum autoritatile (DSP) au mandatat obligativitatea termoscanarii la intrarea in magazine sau la sediul
+     firmelor cu peste 50 de angajati (ref: <a href="https://www.digi24.ro/stiri/actualitate/raed-arafat-termoscanarea-nu-ti-ia-datele-nu-ti-ia-cnp-ul-de-pe-frunte-firmele-care-nu-masoara-temperatura-risca-amenda-1310009">
+       <cite>Firmele care nu măsoară temperatura riscă amendă</cite></a>), asa vor trebui/putea mandata verificarea
+       unei asemenea certificari zilnice.
+   </p>
+
+   <h1 id="Testare" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag"><a class=" scalatex-site-Styles-headerLink"
+      href="#Testare" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+      Testare</h1>     
+   <p>
+    Asa cum am subliniat mai inainte, exista temerea ca o politica care prevede doar testare persoanelor simptomatice
+    va avea efecte limitate in controlul pandemiei si va contribui la o resurgenta a cazurilor noi de infectare.
+  </p>
+  <p>
+    In consecinta, multe state/tari prevad si pregatesc suportul logistic pentru testarea ampla si repetata a populatiei.
+    Spre exemplu, in multe locatii in SUA, orice persoana isi poate programa un test folosind aplicatii online:
+    <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
+      <div style="padding-right: 60px"><img src="./assets/covid-testing-1.jpg" alt="Prevention" width="350"/></div>
+      <div style="padding-left:  60px"><img src="./assets/covid-testing-2.jpg" alt="Prevention" width="350"/></div>
+    </div>       
+  </p>
+  <p>
+    Persoanele care au contacte repetate in populatie (angajati magazine, resturante, ...) sunt incurajati sa se testeze
+    periodic, indiferent de simptomatologie:
+    <div style="padding-right: 60px"><img src="./assets/covid-testing-3w.jpg" alt="Prevention" width="350"/></div>    
+  </p>
+   <p>
+     Suita noastra de <a href="#SolutiiIT">aplicatii</a> incorporeaza o <a href="#TestingApp">aplicatie web</a> care
+     permite identificarea unei locatii de testare si programarea online a testarii (evident, toate aceste locatii vor
+     trebui adaugate in baza de date a aplicatiei in consultanta si coordonare cu autoritatile abilitate).
+   </p>
+
+  <h1 id="UrmarireContacte" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag"><a class=" scalatex-site-Styles-headerLink"
+      href="#UrmarireContacte" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+      Urmarirea Contactelor</h1>     
+  <p>
+    Parte integranta in manualul combaterii pandemiei este urmarirea si depistarea tuturor ccontactatelor pe care
+    o persoana infectata le-a avut in peroada de incubatie (14 zile), si testarea acestor persoane; si in cazul in care
+    unul din aceste contacte se dovedeste pozitiv, aplicarea aceleasi proceduri in cazul contactului.
+  </p>
+  <p>
+    Evident, aceasta activitate este anevoioasa si poate conduce la suprasolicitarea DSP-urilor, ceea ce va da nastere
+    unui feedback loop negativ: cu cat raman in urma DSP-urile in ce priveste urmarirea/depistarea rapida a contactelor, cu
+    atat mai multe persoane vor fi contactate/infectate de persoane infectate cu SARS-COV-2.
+   </p>
+   <p>
+     Chiar si in conditiile in care urmarirea se face in mod eficient si rapid, e posibil ca unele contacte sa fie
+     omise din simplul motiv ca o persoana infectata nu a stiut sau nu isi aduce aminte.
+   </p>
+   <p>
+     Diverse state/tari au adoptat, sau sunt in curs de adoptie, seturi de masuri pentru a face fata exploziei
+     actiunilor de urmarire a contactelor, care explozie este intrevazuta si prezisa o data cu ralaxarea si iesirea
+     din starea de lock-down: de exemplu, statul New York angajeaza si antreneaza un numar de pana in 17000 de "traceri"
+     (ref: <a href="https://www.governor.ny.gov/news/amid-ongoing-covid-19-pandemic-governor-cuomo-announces-contact-tracing-pilot-program-support-0">
+       <cite>New York's Nation-Leading Program Expected to Have 6,400 to 17,000 Tracers</cite></a>)
+   </p>
+   <p>
+     In paralel cu angajarea/antrenarea acestori "traceri" se intrevad si implementari a diverse solutii IT pentru
+     a facilita depistarea contactelor. Unele tari (de exemplu Israel) au fortat operatorii de telefonie mobila
+     in a preda informatiile de geo-locatie a persoanelor infectate, si informatii despre oricare alte persoane aflate
+     in locatiile respective. Fara doar si poate, solutii de acest tip ridica intrebari in privinta protectiilor
+     civile si a datelor cu caracter personal.
+   </p>
+   <p>
+     Printre diversele solutii propuse este si cea de "contact tracking" bazata in principal pe suportul Bluetooth
+     din telefoanele mobile. Idea e ca o mica aplicatie instalata voluntar pe telefonul mobil va comunica cu orice
+     alt telefon pe o raza restranse (2 metri), si va inregistra, anonimizat, toate aceste "contacte". Ulerior, daca
+     se dovedeste ca una din persoane a fost infectata, datele anonimizate aflate in telefonul persoanei infectate
+     pot fi incarcate intr-o baza de date adminstrata de autoritatile statului (DSP, SSI, ...) si pot fi interogate
+     de alte telefoane din aceasta retea ad-hoc/virtuala; orice match va fi raportat doar utilizatorului, si ramane
+     la latitudinea utilizatorului sa contacteze <a href="#Testare">centrele de testare</a> pentu a determina daca
+     a fost sau nu infectat.
+   </p>
+   <p>
+     Aplicatia <a href="#Covid19App">Covid-19 App</a> din suita noastra de <a href="#SolutiiIT">Solutii IT</a>
+     implementeaza un asemenea protocol.
+   </p>
+</div>
+
+<div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+  id="SolutiiIT" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+  <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">
+    Solutii IT
+    <a class=" scalatex-site-Styles-headerLink" href="#SolutiiIT" style="position: absolute;right: 0px;">
+    <i class="fa fa-link"></i></a></h1><br></div>
+<div class=" scalatex-site-Styles-content">
+  <p>
+    Suita de aplicatii pe care am dezvoltat-o incearca sa aduca solutii pentru problemele cu care se confrunta
+    adminstratorii pandemiei COVID-19 la nivel national:
+    
+    <ul>
+     <li>depistarea contactilor</li>
+     <li>evaluarea persoanelor si determinarea riscului de infectie</li>
+     <li>indrumarea persoanelor catre unul centrele de testare, si programarea online a testarii</li>
+     <li>monitorizarea locatiei persoanelor aflate in stare de izolare sau carantina</li>
+     <li>demarcarea circuitelor spitalicesti folosind tehncologii Bluetooth si dirijarea pacientilor in 
+         spitale via o aplicatie de mapare 3D astfel incat sa nu fie incalcate circuitele desemnate in vederea
+         evitarii infectarii pacientilor si personalului medical</li>
+    </ul>
+  </p>
+
+  <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+    id="Covid19App" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+    <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">Covid-19 App
+      <a class=" scalatex-site-Styles-headerLink" href="#Covid19App" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+    </h1>
+    <br>
+  </div>
+  <p>
+    <i style="color: red">TODO: inlocuieste textul din aplicatie cu documentatie tehnica</i>
+  <p>
+    Perioada de incubatie a noului coronavirus este de pana la 14 zile. Asta inseamna ca o persoana infectata
+    poate sa fie purtatoare a acestui virus ptr 2 saptamana inainte ca sa dezvolte simptome specifice.
+    Din pacate, in perioada in care persoana infectata e asimptomatica, ea poate sa infecteze pe altii - 
+    de exemplu, pe tine. Tu, la randul tau, la fel vei putea sa infectezi pe altii, inclusiv pe cei apropiati, 
+    inainte de a afla ca ai fost infectat. De aceea, e vital sa aflii cat mai repede posibil daca ai fost infectat.
+  </p>
+  <p>
+   Daca de fiecare data cand te afli in apropierea unei alte persoane (in magazin, in metrou, la birou), ai putea 
+   sa "tii minte" acest contact, si in plus daca ai putea afla (zilnic) lista cu noile imbolnaviri, ai putea sa
+   compari toate contactele tale si sa determini daca exista vreun risc de imbolnavire. Evident nu poti sa te
+   plimbi pe strada si sa ceri tututor persoanelor pe langa care treci buletinul! Din fericire, putem rezolva
+   problema cu ajutorul tehnologiei: folosind tehnologia Bluetooth, telefonul tau poate sa constate daca se afla 
+   "linga" alt telefon si sa inregistreze acest fapt. Mai tarziu, se poate lega la o baza de date si sa determine
+   daca vreunul dintre contactele tale a fost infectat.
+  </p>
+  <p>
+   Te vei gandi - "desigur, o idee buna, dar cum pot sa permit oricarei persoane necunoscute care se intampla sa
+   treaca pe langa mine sa afle date si informatii despre mine". Vestea buna este ca solutia pe care o propunem e
+   voluntara, complet anonima, toate datele sunt stocate doar pe telefonul tau, si nici o data personala nu e
+   shareuita cu terte persoane.
+  </p>
+  <p>
+   Aplicatia va genera la intervale regulate (din 10 in 10 minute) un numar unic, complet aleator (random), si nu are
+   legatura cu tine, numarul tau de telefon, adresa ta email, profilul tau de facebook, etc - e doar un numar. In mod
+   similar, si aplicatiile celorlalti participanti in program vor genera asemenenea numere aleatoare. Cand doi
+   participanti se afla in contact fizic (distanta de mai putin de 5m pentru mai mult de 2 minute), acesti identificatori
+   vor fi interschimbati. De vreme ce peste alte 10 minute, numarul generat de aplicatia ta va fi diferit, nimeni nu va
+   putea sa faca vreo legatura intre tine si acest numar. In plus, aceste numere vor fi stocate doar pe telefoanele
+   mobile - nu exista nici o baza de date centrala in care sa fie salvate. In plus, toate numerele mai vechi de
+   14 zile vor fi sterse in mod automat.
+  </p>
+  <p>
+    Daca unul din contactele tale a fost testat pozitiv, va putea sa decida daca vrea sa puna la dispozitia DSU
+    numerele stocate pe telefonul sau. Daca decide sa NU puna la dispozitia DSU aceste informatii atunci nu vei putea
+    fi notificat in mod automat. In caz contrar, DSU va incarca intr-o baza de date aceste numere. Telefonul tau va
+    interoga in mod periodic aceasta baza de date si va compara numerele stocate pe telefonul tau cu numerele stocate.
+    In caz ca aplicatia va gasi un "match" te va notifica. Ce e important de inteles e ca DSU nu stie si nu poate stii
+    cui corespund numerele incarcate in baza lor de date. Toate comparatiile si matching-ul se fac EXCLUSIV de aplicatia
+    care ruleaza local pe telefonul tau, si doar tu vei stii daca aplicatia a gasit un asemenea match.
+  </p>
+  
+  <h1 id="Covid19App-Home" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-Home" style="position: absolute;right: 0px;">
+       <i class="fa fa-link"></i></a>Home
+  </h1>
+  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
+    <img src="./assets/Covid19App-Home.jpg" alt="Home" width="250"/>
+  </div>
+  
+  <h1 id="Covid19App-Prevention" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-Prevention" style="position: absolute;right: 0px;">
+       <i class="fa fa-link"></i></a>Cum sa prevenim infectarea
+  </h1>
+  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
+    <div style="padding-right: 60px"><img src="./assets/Covid19App-Prevention-1.jpg" alt="Prevention" width="250"/></div>
+    <div style="padding-left:  60px"><img src="./assets/Covid19App-Prevention-2.jpg" alt="Prevention" width="250"/></div>
+  </div>      
+
+  <h1 id="Covid19App-Diagnose" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-Diagnose" style="position: absolute;right: 0px;">
+       <i class="fa fa-link"></i></a>Evalueaza-te
+  </h1>
+  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
+    <img src="./assets/Covid19App-Diagnose.jpg" alt="Diagnose" width="250"/>
+  </div>
+
+  <h1 id="Covid19App-InfoCall" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-InfoCall" style="position: absolute;right: 0px;">
+       <i class="fa fa-link"></i></a>Tel Verde
+  </h1>
+  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
+    <img src="./assets/Covid19App-InfoCall.jpg" alt="InfoCall" width="250"/>
+  </div>      
+
+  <h1 id="Covid19App-Certification" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-DailyPass" style="position: absolute;right: 0px;">
+       <i class="fa fa-link"></i></a>Certificare
+  </h1>
+  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
+    <img src="./assets/Covid19App-DailyPass.jpg" alt="DailyPass" width="250"/>
+  </div>
+
+  <h1 id="Covid19App-ContactTracking" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-ContactTracking" style="position: absolute;right: 0px;">
+       <i class="fa fa-link"></i></a>Contact Tracking
+  </h1>
+  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
+    <div style="padding-right: 60px"><img src="./assets/Covid19App-ContactTracking-1.jpg" alt="Prevention" width="250"/></div>
+    <div style="padding-left:  60px"><img src="./assets/Covid19App-ContactTracking-2.jpg" alt="Prevention" width="250"/></div>
+  </div> 
+
+  <h1 id="Covid19App-LearnMore" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-ContactTracking" style="position: absolute;right: 0px;">
+       <i class="fa fa-link"></i></a>Informatii Utile
+  </h1>
+  <div style="display: flex; justify-content: left; padding-top: 30px">
+    <div style="padding-right: 60px"><img src="./assets/Covid19App-LearnMore.jpg" alt="LearnMore" width="250"/></div>
+  </div>
+  
+  <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+    id="EvaluationApp" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+    <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">Evaluare
+      <a class=" scalatex-site-Styles-headerLink" href="#Evaluare" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+    </h1>
+    <br>
+  </div>
+
+  <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+    id="TestingApp" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+    <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">Testare
+      <a class=" scalatex-site-Styles-headerLink" href="#TestingApp" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+    </h1>
+    <br>
+  </div>
+  
+  <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+    id="ControlCircuite" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+    <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">Controlul Circuitelor Spitalicesti
+      <a class=" scalatex-site-Styles-headerLink" href="#ControlCircuite" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+    </h1>
+    <br>
+  </div>  
+</div>
+
+<div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+  id="Changelog" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+  <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">
+    Changelog
+    <a class=" scalatex-site-Styles-headerLink" href="#Changelog" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a>
+  </h1><br>
+</div>
+
+<div class=" scalatex-site-Styles-content">
+  <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+    id="0.1.2" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+    <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">0.1.2<a class=" scalatex-site-Styles-headerLink" href="#0.1.2" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a></h1><br></div>
+    <ul>
+      <li>add 'Motivation', 'Intro' sections</li>
+    </ul>
+  <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
+    id="0.1.1" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
+    <h1 style="margin: 0.2em 0;font-size: 3em;font-weight: 300;">0.1.1<a class=" scalatex-site-Styles-headerLink" href="#0.1.1" style="position: absolute;right: 0px;"><i class="fa fa-link"></i></a></h1><br></div>
+    <ul>
+      <li>initial version.</li>
+    </ul>
+</div>
+
+<script>
+    scalatex.scrollspy.Controller().main(
+      [{"value":"Contact Tracking",
+    	  "children":[
+    		  {"value":"Masuri de Control", "children":[
+	          {"value":"Distantarea Fizica","children":[]},
+	          {"value":"Depistare Rapida","children":[]}]},
+    	    {"value":"Solutii IT", "children":[
+    	    	{"value":"Covid-19 App","children":[
+    	    		{"value":"Acasa","children":[]},
+    	        {"value":"Preventie","children":[]},
+    	        {"value":"Evaluare","children":[]},
+    	        {"value":"Tel Verde","children":[]},          
+    	        {"value":"Certificare","children":[]},
+    	        {"value":"Contact Tracking","children":[]},
+    	        {"value":"Informeaza-te","children":[]}]},
+    			  {"value":"Testare","children":[]},
+    				{"value":"Evaluare","children":[]},
+    				{"value":"Controlul Circuite Spitalicesti","children":[]}]},
+    			{"value":"Changelog","children":[
+    			  {"value":"0.1.2","children":[]},
+    				{"value":"0.1.1","children":[]}]}]
+  )</script>
+  <div class="scalatex-scrollspy-Styles-menu" style="width: 250px;">
+    <div style="display: flex; flex-direction: column; min-height: 100%; transition: opacity 0.2s ease-out 0s; opacity: 1;">
+      <ul class="menu-item-list" style="margin: 0px; padding: 0px; flex: 10000 1 0%;">
+        <li style="display: block;"><a href="#ContactTracking" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-selected">Contact Tracking</a>
+        <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 405px;">
+          <li style="display: block;">
+            <a href="#MasuriControl" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+              Masuri de Control</a>
+            <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;">
+              <li style="display: block;">
+                <a href="#DistantareFizica" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                  Distantare Fizica</a>
+                <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+              </li>
+              <li style="display: block;">
+                <a href="#DepistareRapida" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                  Depistare Rapida</a>
+                <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+              </li>
+              <li style="display: block;">
+                <a href="#Testare" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                  Testare</a>
+                <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+              </li>
+              <li style="display: block;">
+                <a href="#UrmarireContacte" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                  Urmarirea Contactelor</a>
+                <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        </li>
+        <li style="display: block;">
+          <a href="#SolutiiIT" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-selected">
+            Solutii IT</a>
+          <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 405px;">
+            <li style="display: block;">
+              <a href="#Covid19App" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                Covid-19 App</a>
+              <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;">
+                <li style="display: block;">
+                  <a href="#Covid19App-Home" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                    Acasa</a>
+                  <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+                </li>
+                <li style="display: block;">
+                  <a href="#Covid19App-Prevention" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                    Preventie</a>
+                  <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+                </li>
+              
+              </ul>
+            </li>
+            
+            <li style="display: block;">
+              <a href="#Evaluare" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                Evaluare</a>
+              <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+            </li>
+           
+            <li style="display: block;">
+              <a href="#TestingApp" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                Testare</a>
+              <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+            </li>
+
+            <li style="display: block;">
+              <a href="#ControlCircuite" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                Circuite Spitalicesti</a>
+              <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+            </li>
+          </ul>
+        </li>
+        <li style="display: block;">
+          <a href="#Changelog" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-selected">
+            Changelog</a>
+          <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 405px;">
+            <li style="display: block;">
+              <a href="#0.1.1" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                0.1.2</a>
+              <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+            </li>
+            <li style="display: block;">
+              <a href="#0.1.1" class="menu-item scalatex-scrollspy-Styles-menuItem scalatex-scrollspy-Styles-closed">
+                0.1.1</a>
+              <ul class="scalatex-scrollspy-Styles-menuList" style="max-height: 0px;"></ul>
+            </li>
+        </li>
+      </ul>
+      
+      <a href="javascript:" class="scalatex-scrollspy-Styles-menuLink" style="right: 44px;"><i class="fa fa-caret-down" style="color: white;"></i></a>
+      <div class="scalatex-scrollspy-Styles-noteBox"><a href="https://lihaoyi.github.io/Scalatex" class="scalatex-scrollspy-Styles-note">Published using Scalatex</a></div></div><a href="javascript:" class="scalatex-scrollspy-Styles-menuLink" style="right: 0px;"><i class="fa fa-caret-left" style="color: white;"></i></a></div><script>
+    ['DOMContentLoaded', 'load'].forEach(function(ev){
+      addEventListener(ev, function(){
+        Array.prototype.forEach.call(
+          document.getElementsByClassName('scalatex-site-Styles-highlightMe'),
+          hljs.highlightBlock
+        );
+      })
+    })
+  </script></body></html>
