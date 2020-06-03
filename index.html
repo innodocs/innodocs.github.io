@@ -1,5 +1,18 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./assets/font-awesome.min.css" rel="stylesheet"><link href="./assets/styles.css" rel="stylesheet"><link rel="shortcut icon" type="image/png" href="favicon.png"><style>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="./assets/font-awesome.min.css" rel="stylesheet">
+<link href="./assets/styles.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+
+<!--  bootstrap -->  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  
+<style>
 .scalatex-site-Styles-headerLink{
   color: #777;
   opacity: 0.05;
@@ -405,11 +418,38 @@ span.hljs-tag, span.hljs-symbol{
   <p>
     In consecinta, multe state/tari prevad si pregatesc suportul logistic pentru testarea ampla si repetata a populatiei.
     Spre exemplu, in multe locatii in SUA, orice persoana isi poate programa un test folosind aplicatii online:
-    <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-      <div style="padding-right: 60px"><img src="./assets/covid-testing-1.jpg" alt="Prevention" width="350"/></div>
-      <div style="padding-left:  60px"><img src="./assets/covid-testing-2.jpg" alt="Prevention" width="350"/></div>
-    </div>       
+    <br/><br/>
+
+		<div id="Testing-Carousel" class="carousel slide" data-ride="carousel">
+		
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" style="height: 320px">
+		    <div class="carousel-item active" data-interval="60000">
+		      <img class="d-block w-100" src="./assets/covid-testing-1.jpg" alt="Prevention1"/>
+		    </div>
+		
+		    <div class="carousel-item" data-interval="60000">
+		      <img class="d-block w-100" src="./assets/covid-testing-2.jpg" alt="Prevention"/>
+		    </div>
+		  </div>
+		
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#Testing-Carousel" style="background-color: #9a1919" data-slide-to="0" class="active"></li>
+        <li data-target="#Testing-Carousel" style="background-color: #9a1919" data-slide-to="1"></li>
+      </ol>
+		  <!-- Left and right controls -->
+		  <a class="carousel-control-prev" style="position: absolute" href="#Testing-Carousel" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" style="position: absolute" href="#Testing-Carousel" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
   </p>
+  
   <p>
     Persoanele care au contacte repetate in populatie (angajati magazine, resturante, ...) sunt incurajati sa se testeze
     periodic, indiferent de simptomatologie:
@@ -541,68 +581,115 @@ span.hljs-tag, span.hljs-symbol{
     care ruleaza local pe telefonul tau, si doar tu vei stii daca aplicatia a gasit un asemenea match.
   </p>
   
-  <h1 id="Covid19App-Home" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
-     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-Home" style="position: absolute;right: 0px;">
-       <i class="fa fa-link"></i></a>Home
-  </h1>
-  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-    <img src="./assets/Covid19App-Home.jpg" alt="Home" width="250"/>
-  </div>
-  
-  <h1 id="Covid19App-Prevention" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
-     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-Prevention" style="position: absolute;right: 0px;">
-       <i class="fa fa-link"></i></a>Cum sa prevenim infectarea
-  </h1>
-  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-    <div style="padding-right: 60px"><img src="./assets/Covid19App-Prevention-1.jpg" alt="Prevention" width="250"/></div>
-    <div style="padding-left:  60px"><img src="./assets/Covid19App-Prevention-2.jpg" alt="Prevention" width="250"/></div>
-  </div>      
+  <p><br/>
+    <div id="Covid19App-Carousel" class="carousel slide" data-ride="carousel" style="width:300px; alignItems: center; margin-left: 100px">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" >
+        <div class="carousel-item active" data-interval="10000">
+          <img src="./assets/Covid19App-Home.jpg" alt="Home"  width="300" />
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Home</p>
+          </div>          
+        </div> 
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-Prevention-1.jpg" alt="Prevention" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Cum sa prevenim infectarea (1)</p>
+          </div>          
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-Prevention-2.jpg" alt="Prevention" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Cum sa prevenim infectarea (2)</p>
+          </div>          
+        </div>
+        <!-- 
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-Diagnose.jpg" alt="Diagnose" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Evaluare</p>
+          </div>          
+        </div>
+        -->
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-InfoCall.jpg" alt="InfoCall" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>TelVerde</p>
+          </div>          
+        </div>
 
-  <h1 id="Covid19App-Diagnose" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
-     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-Diagnose" style="position: absolute;right: 0px;">
-       <i class="fa fa-link"></i></a>Evalueaza-te
-  </h1>
-  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-    <img src="./assets/Covid19App-Diagnose.jpg" alt="Diagnose" width="250"/>
-  </div>
-
-  <h1 id="Covid19App-InfoCall" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
-     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-InfoCall" style="position: absolute;right: 0px;">
-       <i class="fa fa-link"></i></a>Tel Verde
-  </h1>
-  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-    <img src="./assets/Covid19App-InfoCall.jpg" alt="InfoCall" width="250"/>
-  </div>      
-
-  <h1 id="Covid19App-Certification" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
-     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-DailyPass" style="position: absolute;right: 0px;">
-       <i class="fa fa-link"></i></a>Certificare
-  </h1>
-  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-    <div style="padding-right: 60px"><img src="./assets/Covid19App-DailyPass-1.jpg" alt="DailyPass" width="250"/></div>
-    <div style="padding-left:  60px"><img src="./assets/Covid19App-DailyPass-2.png" alt="DailyPass" width="250"/></div>
-  </div> 
-  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-    <div style="padding-right: 60px"><img src="./assets/Covid19App-DailyPass-3.png" alt="DailyPass" width="250"/></div>
-    <div style="padding-left:  60px"><img src="./assets/Covid19App-DailyPass-4.jpg" alt="DailyPass" width="250"/></div>
-  </div> 
-  
-  <h1 id="Covid19App-ContactTracking" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
-     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-ContactTracking" style="position: absolute;right: 0px;">
-       <i class="fa fa-link"></i></a>Contact Tracking
-  </h1>
-  <div style="display: flex; justify-content: left; padding-top: 30px; padding-bottom: 30px;">
-    <div style="padding-right: 60px"><img src="./assets/Covid19App-ContactTracking-1.jpg" alt="Prevention" width="250"/></div>
-    <div style="padding-left:  60px"><img src="./assets/Covid19App-ContactTracking-2.jpg" alt="Prevention" width="250"/></div>
-  </div> 
-
-  <h1 id="Covid19App-LearnMore" style="display: block;" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
-     <a class=" scalatex-site-Styles-headerLink" href="#Covid19App-ContactTracking" style="position: absolute;right: 0px;">
-       <i class="fa fa-link"></i></a>Informatii Utile
-  </h1>
-  <div style="display: flex; justify-content: left; padding-top: 30px">
-    <div style="padding-right: 60px"><img src="./assets/Covid19App-LearnMore.jpg" alt="LearnMore" width="250"/></div>
-  </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-DailyPass-1.jpg" alt="DailyPass-1" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Certificare (1)</p>
+          </div>          
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-DailyPass-2.png" alt="DailyPass-2" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Certificare (2)</p>
+          </div>          
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-DailyPass-3.png" alt="DailyPass-3" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Certificare (3)</p>
+          </div>          
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-DailyPass-4.jpg" alt="DailyPass-4" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Certificare (4)</p>
+          </div>          
+        </div>
+    
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-ContactTracking-1.jpg" alt="ContactTracking-1" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Contact Tracking (1)</p>
+          </div>          
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-ContactTracking-1.jpg" alt="ContactTracking-2" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Contact Tracking (2)</p>
+          </div>          
+        </div>
+        
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19App-LearnMore.jpg" alt="LearnMore" width="300" />    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Informatii Utile</p>
+          </div>          
+        </div>
+      </div>
+                 
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="0" class="active"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="1"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="2"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="3"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="4"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="5"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="6"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="7"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="8"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="9"></li>
+        <li data-target="#Covid19App-Carousel" style="background-color: #9a1919" data-slide-to="10"></li>
+      </ol>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" style="position: absolute" href="#Covid19App-Carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" style="position: absolute" href="#Covid19App-Carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </p>
 
   <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
     id="Evaluare" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
@@ -611,31 +698,50 @@ span.hljs-tag, span.hljs-symbol{
     </h1>
     <br>
   </div>
-  <p>
-    Home: linkuri spre chestionarul de evaluare respectiv motorul de cautare:
-    <br/>
-  </p>
-  <p>
-    <img src="./assets/Covid19Testing-Home.jpg" alt="TestingApp" style="border:thin solid #888888;" width="640"/>
-  </p>
-  <p>
-    <br/>
-    Chestionar de evaluare: arbore de decizie, bazat pe selectiile utilizatorului:
-    <br/>
-  </p>
-  <p>
-    <img src="./assets/Covid19Testing-Assessment-1.jpg" alt="TestingApp" style="border:thin solid #888888;" width="640"/>         
-  </p>
-  <p>
-    <br/>
-    Motor de cautare laboratoare de testare Covid-19, informatii orar de functionare,
-    conditii de testare, programare online:
-    <br/>
-  </p>
-  <p>
-    <img src="./assets/Covid19Testing-Search.jpg" alt="TestingApp" style="border:thin solid #888888;" width="640"/>
-  </p>  
   
+    <div id="TestingApp-Carousel" class="carousel slide" data-ride="carousel">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" style="height: 500px">
+        <div class="carousel-item active" data-interval="10000">
+          <img src="./assets/Covid19Testing-Home.jpg"  alt="TestingApp" style="border:thin solid #888888;" width="640"/>
+		      <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+		        <p><br/>Home: linkuri spre chestionarul de evaluare respectiv motorul de cautare</p>
+		      </div>          
+        </div> 
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19Testing-Assessment-1.jpg"  alt="TestingApp" style="border:thin solid #888888;" width="640"/>    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Chestionar de evaluare: arbore de decizie, bazat pe selectiile utilizatorului</p>
+          </div>          
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="./assets/Covid19Testing-Search.jpg"  alt="TestingApp" style="border:thin solid #888888;" width="640"/>    
+          <div class="carousel-caption d-none d-md-block" style="color: #aaaaaa">
+            <p><br/>Motor de cautare laboratoare de testare Covid-19, informatii orar de functionare,
+                    conditii de testare, programare online:</p>
+          </div>          
+        </div>
+      </div>
+          
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#TestingApp-Carousel" style="background-color: #9a1919" data-slide-to="0" class="active"></li>
+        <li data-target="#TestingApp-Carousel" style="background-color: #9a1919" data-slide-to="1"></li>
+        <li data-target="#TestingApp-Carousel" style="background-color: #9a1919" data-slide-to="2"></li>
+      </ol>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" style="position: absolute" href="#TestingApp-Carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" style="position: absolute" href="#TestingApp-Carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </p>
+  </div>
   
     
   <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
@@ -645,7 +751,7 @@ span.hljs-tag, span.hljs-symbol{
     </h1>
     <br>
   </div>  
-</div>
+
 
 <div style="margin: 0px;color: #333;text-align: center;padding: 2.5em 2em 0;border-bottom: 1px solid #eee;display: block;"
   id="Changelog" class=" scalatex-site-Styles-hoverContainer scalatex-site-Styles-headerTag">
